@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café 1 - Tesoro en Grano S.A. de C.V.</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #4c4545;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        /* Estilo para el banner que cubre toda la parte superior */
+        .banner {
+            background-color: #2C3E50;
+            width: 100%;
+            height: 250px; /* Altura fija para el banner */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Imagen del banner (cubre todo el ancho) */
+        .banner img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border: solid;
+        }
+
+        /* Contenedor de botones y logo debajo del banner */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Espacio debajo del banner */
+        }
+
+        .button-container div {
+            margin-right: 40px; /* Espacio entre botones y logo */
+        }
+
+        /* Estilo de los botones */
+        button {
+            margin: 15px;
+            padding: 15px 30px;
+            background-color: #393e42;
+            color: white;
+            border: 2px solid black;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #2C3E50;
+            transform: scale(1.05);
+        }
+
+        .logo-container {
+            margin-top: 0px;
+            margin-bottom: 0px; /* Espacio antes de la historia */
+        }
+
+        .logo-container img {
+            height: 180px; /* Tamaño del logo */
+            width: auto;
+            border: solid;
+        }
+
+       
+
+        /* Sección de contenido */
+        .content {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 1.5;
+            color: #000;
+        }
+
+        h1, h2 {
+            color: #ffffff;
+
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+            margin-bottom: 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #c28e8e;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid black; 
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+        }
+
+        ul li {
+            margin: 10px 0;
+            font-size: 18px;
+            margin-bottom: 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #c28e8e;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid black; 
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #393e42;
+            color: white;
+            padding: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner que cubre toda la parte superior -->
+    <div class="banner">
+        <img src="banner.png" alt="Imagen del Banner"> <!-- Imagen de banner -->
+    </div>
+
+    <!-- Contenedor de botones debajo del banner -->
+    <div class="button-container">
+        <div>
+            <button onclick="window.location.href='index.html'">Inicio</button>
+            <button onclick="window.location.href='cafe1.html'">¿Quiénes somos?</button>
+            <button onclick="window.location.href='cafe2.html'">Productos</button>
+            <button onclick="window.location.href='cafe4.html'">Contacto</button>
+        </div>
+    </div>
+
+    <!-- Logo debajo de los botones -->
+    <div class="logo-container">
+        <img src="logo.jpg" alt="Logo">
+    </div>
+
+    <!-- Sección de contenido principal -->
+    <div class="content">
+        <center>
+        <h1 align="center">¡Nuestra Historia!</h1>
+        <img border="2" src="cafe1.jpg" alt="Historia de Tesoro en Grano" style="width: 45%; height: auto; margin-bottom: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);" >
+        </center>
+        <p>
+            Tesoro en Grano S.A. de C.V. fue establecida en 2005 en Santiago de María,
+            Usulután, una región famosa por su rica tradición cafetera en El Salvador. Fundada
+            por un grupo de emprendedores con una profunda admiración por el café y un
+            compromiso con la excelencia, la empresa comenzó con una pequeña finca y un
+            objetivo ambicioso: exportar café de alta calidad al mercado internacional.
+        </p>
+        <p>
+            Desde sus inicios, Tesoro en Grano se ha enfocado en elevar el perfil del café
+            salvadoreño en el mercado global, destacando por su sabor y calidad
+            excepcionales. Con el paso de los años, la empresa ha expandido su operación
+            significativamente, invirtiendo en tecnología de punta y en prácticas agrícolas
+            sostenibles. Este crecimiento ha consolidado a Tesoro en Grano como un nombre
+            destacado en la industria cafetera, conocido por su dedicación a la calidad y su
+            impacto positivo en la comunidad local.
+        </p>
+
+        <h2>Nuestra Misión</h2>
+        <p>
+            La misión de Tesoro en Grano S.A. de C.V. es proporcionar a sus clientes
+internacionales café de la más alta calidad que refleje la riqueza y la autenticidad
+del café salvadoreño. La empresa se compromete a mantener altos estándares en
+todas las etapas de producción y exportación, trabajando estrechamente con los
+productores locales para garantizar que cada grano cumpla con sus rigurosos
+criterios de calidad. Además, Tesoro en Grano busca promover prácticas sostenibles
+que beneficien tanto al medio ambiente como a las comunidades agrícolas que
+dependen de la producción de café.
+
+        </p>
+
+        <h2>Nuestra Visión</h2>
+        <p>
+            La visión de Tesoro en Grano S.A. de C.V. es convertirse en un referente global en
+la exportación de café de alta calidad. La empresa aspira a ser reconocida por su
+excelencia en la producción y comercialización del café salvadoreño, destacándose
+por su capacidad para ofrecer productos innovadores y sostenibles. Tesoro en
+Grano busca ser el socio preferido para tostadores e importadores que buscan café
+auténtico y excepcional, y contribuir significativamente al crecimiento y
+reconocimiento del café salvadoreño en los mercados internacionales.
+
+        <h2>Nuestros Valores</h2>
+        <ul>
+            <li><b>Calidad:</b> Tesoro en Grano se compromete a mantener la excelencia en cada
+                etapa del proceso, desde la selección de los granos hasta la entrega final del producto.</li>
+            <li><b>Sostenibilidad:</b> Implementamos prácticas agrícolas y empresariales respetuosas con el medio ambiente.</li>
+            <li><b>Integridad:</b> Operamos con honestidad y transparencia, manteniendo una comunicación abierta y ética.</li>
+            <li><b>Innovación:</b> Buscamos constantemente mejorar nuestros procesos y productos con nuevas tecnologías.</li>
+            <li><b>Tradición:</b> Valoramos y preservamos las técnicas tradicionales de producción de café, mientras incorporamos mejoras modernas.</li>
+        </ul>
+
+        <h2>Giro de Negocio</h2>
+        <p>
+            Tesoro en Grano S.A. de C.V. opera en el sector agroindustrial, con un enfoque
+específico en la producción y exportación de café. El giro del negocio incluye el
+procesamiento de café (oro), café en pergamino y café entero. La empresa se
+especializa en servir a mercados internacionales que buscan café de alta calidad y
+está comprometida con la excelencia en cada aspecto de su operación, desde la
+cosecha en sus fincas en El Salvador hasta la entrega de productos terminados en
+todo el mundo.
+La empresa aprovecha su ubicación en Santiago de María, Usulután, para ofrecer
+café que destaca por su sabor y calidad únicos, influenciados por las condiciones
+climáticas y el suelo de la región. Tesoro en Grano está enfocada en construir
+relaciones sólidas con clientes y socios internacionales, garantizando una
+experiencia de producto que refleje su compromiso con la excelencia y la
+sostenibilidad.
+        </p>
+    </div>
+
+
+
+    <footer>
+        &copy; 2024 TESORO EN GRANO S.A. DE C.V. - Todos los derechos reservados
+    </footer>
+</body>
+</html>

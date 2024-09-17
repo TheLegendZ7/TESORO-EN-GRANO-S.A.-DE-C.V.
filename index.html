@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #4c4545;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo para el banner que cubre toda la parte superior */
+        .banner {
+            background-color: #2C3E50;
+            width: 100%;
+            height: 250px; /* Altura fija para el banner */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Imagen del banner (cubre todo el ancho) */
+        .banner img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border: solid;
+        }
+
+        /* Contenedor de logo y botones */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .logo {
+            margin-right: 40px; /* Espacio entre logo y botones */
+            height: 140px; /* Tamaño del logo */
+            width: auto;
+            border: solid;
+        }
+
+        /* Estilo de los botones */
+        button {
+            margin: 15px;
+            padding: 15px 30px;
+            background-color: #393e42;
+            color: white;
+            border: 2px solid black;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #2C3E50;
+            transform: scale(1.05);
+        }
+
+        /* Carrusel de imágenes */
+        .slider-container {
+            margin: 40px 0; /* Espacio antes del pie de página */
+            position: relative;
+        }
+
+        .slider {
+            position: relative;
+            width: 60%; /* Ajusta el tamaño del carrusel */
+            height: 500px;
+            margin: 0 auto;
+            border: 2px solid #393e42;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 500px; /* Altura ajustada para que sea similar a un video */
+            object-fit: cover;
+        }
+
+        /* Estilo de los botones de control del carrusel */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Pie de página */
+        footer {
+            margin-top: 50px;
+            background-color: #393e42;
+            color: white;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner que cubre toda la parte superior -->
+    <div class="banner">
+        <img src="banner.png" alt="Imagen del Banner"> <!-- Imagen de banner -->
+    </div>
+
+    <!-- Contenedor de botones y logo debajo del banner -->
+    <div class="button-container">
+        <img src="logo.jpg" alt="Logo" class="logo"> <!-- Logo a la izquierda -->
+        <div>
+            <button onclick="window.location.href='index.html'">Inicio</button>
+            <button onclick="window.location.href='cafe1.html'">¿Quiénes somos?</button>
+            <button onclick="window.location.href='cafe2.html'">Productos</button>
+            <button onclick="window.location.href='cafe4.html'">Contacto</button>
+        </div>
+    </div>
+
+    <!-- Carrusel de imágenes en lugar del video -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <img src="ELSALVADOR.png" alt="Imagen 1">
+                <img src="fabrica1.jpg" alt="Imagen 2">
+                <img src="oro.jpg" alt="Imagen 3">
+                <img src="CHAMBEADORES.png" alt="Imagen 1">
+                <img src="fabrica2.jpg" alt="Imagen 2">
+                <img src="oro2.jpg" alt="Imagen 3">
+                <img src="BUKELE.png" alt="Imagen 1">
+                <img src="fabrica3.jpg" alt="Imagen 2">
+                <img src="oro3.jpg" alt="Imagen 3">
+                <img src="MESSI.png" alt="Imagen 1">
+                <img src="fabrica4.jpg" alt="Imagen 2">
+                <img src="oro4.png" alt="Imagen 3">
+            </div>
+        </div>
+        <!-- Botones para controlar el carrusel -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <footer>
+        &copy; 2024 TESORO EN GRANO S.A. DE C.V. - Todos los derechos reservados
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slides img').length;
+
+        // Ajusta el tamaño del contenedor .slides de acuerdo con el número total de imágenes
+        slides.style.width = `${totalSlides * 100}%`;
+
+        // Función para cambiar automáticamente de imagen
+        function changeSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slides.style.transform = `translateX(-${currentIndex * (100 / totalSlides)}%)`;
+        }
+
+        // Función para el botón de siguiente
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slides.style.transform = `translateX(-${currentIndex * (100 / totalSlides)}%)`;
+        }
+
+        // Función para el botón de anterior
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${currentIndex * (100 / totalSlides)}%)`;
+        }
+
+        // Cambiar imagen automáticamente cada 5 segundos
+        setInterval(changeSlide, 5000); // Cambiar imagen cada 5 segundos
+    </script>
+</body>
+</html>
